@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2d5f2174-416d-4b00-b17f-3184a11dddff}</ProjectGuid>
+    <AssemblyName>lcls-plc-rixs-optics_scope</AssemblyName>
+    <Name>lcls-plc-rixs-optics_scope</Name>
+    <RootNamespace>lcls-plc-rixs-optics_scope</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Scope YT NC Project.svdx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scope YT NC Project.tcscopex">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

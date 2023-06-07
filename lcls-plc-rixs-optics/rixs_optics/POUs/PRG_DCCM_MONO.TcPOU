@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_DCCM_MONO" Id="{b320b6e3-c58e-45fd-adab-641616c79d17}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_DCCM_MONO
+VAR
+//    FFO    :    FB_FastFault :=(
+//        i_DevName := 'DCCM-MONO',
+//        i_Desc := 'Fault occurs when device is in an usafe state',
+//        i_TypeCode := 16#E50);
+    fbBragg1: FB_MotionStage;
+	fbBragg2: FB_MotionStage;
+    fbTx: FB_MotionStage;
+    fbTxd: FB_MotionStage;
+    fbTyd: FB_MotionStage;
+    fbYag: FB_MotionStage;
+
+
+
+
+    {attribute 'pytmc' := '
+        pv: DCCM:MONO:FAN:PWR
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 8^Output'}
+    bFanOn AT %Q*:BOOL;
+
+    bInit : BOOL:=TRUE;
+
+     (*Motion Parameters*)
+    fSmallDelta: LREAL := 0.01;
+    fBigDelta: LREAL := 10;
+    fMaxVelocity: LREAL := 0.5;
+    fHighAccel: LREAL := 0.8;
+    fLowAccel: LREAL := 0.1;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//  init the motion stages parameters
+IF ( bInit) THEN
+    bInit := FALSE;
+//    FFO.i_DevName := 'DCCM-MONO';
+    //Bragg 1
+    Main.M1.bHardwareEnable := TRUE;
+    Main.M1.bPowerSelf :=TRUE;
+    Main.M1.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    Main.M1.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+   //Bragg 2
+    Main.M2.bHardwareEnable := TRUE;
+    Main.M2.bPowerSelf :=TRUE;
+    Main.M2.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    Main.M2.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+    //TX
+    Main.M3.bHardwareEnable := TRUE;
+    Main.M3.bPowerSelf :=TRUE;
+    Main.M3.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    Main.M3.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+    //TXD
+    Main.M4.bHardwareEnable := TRUE;
+    Main.M4.bPowerSelf :=TRUE;
+    Main.M4.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    Main.M4.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+    //TYD
+    Main.M5.bHardwareEnable := TRUE;
+    Main.M5.bPowerSelf :=TRUE;
+    Main.M5.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
+    Main.M5.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+
+ 
+    //Turn on Fan by default
+    bFanOn := TRUE;
+END_IF
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_DCCM_MONO">
+      <LineId Id="3" Count="4" />
+      <LineId Id="213" Count="0" />
+      <LineId Id="9" Count="23" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="53" Count="5" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

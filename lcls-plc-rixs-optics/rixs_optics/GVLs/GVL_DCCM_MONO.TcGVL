@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_DCCM_MONO" Id="{b80c1e96-150a-4c40-81ca-c5a63f5628f5}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+    // Encoder reference values in counts = nm
+    // Put encoder reference values for nominal 0 here
+    nM2K2X_ENC_REF : ULINT := 6077000; //these numbers
+    nM2K2Y_ENC_REF : ULINT := 5975460; //are
+    nM2K2rX_ENC_REF : ULINT := 50412360;//real
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

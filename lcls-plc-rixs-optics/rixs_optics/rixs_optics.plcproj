@@ -20,52 +20,7 @@
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DaqTask.TcTTO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\ENUM_XS_YAG_States.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Function Blocks\FB_XS_YAG_States.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K1.TcGVL">
-      <SubType>Code</SubType>
-      <LinkAlways>true</LinkAlways>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K1_BENDER_Constants.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K1_BENDER_RTD.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K1_Constants.TcGVL">
-      <SubType>Code</SubType>
-      <LinkAlways>true</LinkAlways>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K2.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M2K2.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M3K2.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M4K2.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_M1K2_Constants.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\GVL_PMPS.TcGVL">
-      <SubType>Code</SubType>
-      <LinkAlways>true</LinkAlways>
-    </Compile>
-    <Compile Include="GVLs\GVL_SerialIO.TcGVL">
+    <Compile Include="GVLs\GVL_DCCM_MONO.TcGVL">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GVLs\Main.TcGVL">
@@ -102,85 +57,13 @@
     <Compile Include="Implicit Checks\CheckRangeUnsigned.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PiezoDriver.TcTTO">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="PlcTask.TcTTO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\DUT_01_Channel_NW.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\DUT_Channel_NW.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\DUT_Header_NW.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\FB_BufferedSocketSend.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\FB_AssembleChannel.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\FB_AssembleHeader.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\FB_UDPSocketHandler.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\F_AddChannelToHeader.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\DAQ Comm\PRG_DAQ_ENCODER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_1_PlcTask.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_2_PMPS_POST.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR1K1_BEND.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR2K2_FLAT.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR1K1_BEND_BENDER.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR1K2_SWITCH.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR3K2_KBH.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_MR4K2_KBV.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_SL1K2_EXIT.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_SP1K1_MONO.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_SPO_PMPS.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_ST1K1_ZOS.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\PRG_ZeroOrder_PMPS.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Serial Comm\PiezoSerial.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Serial Comm\P_Serial_Com.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SerialIO.TcTTO">
+    <Compile Include="POUs\PRG_DCCM_MONO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -189,8 +72,6 @@
     <Folder Include="GVLs" />
     <Folder Include="Function Blocks" />
     <Folder Include="Implicit Checks" />
-    <Folder Include="POUs\DAQ Comm" />
-    <Folder Include="POUs\Serial Comm" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
@@ -199,9 +80,13 @@
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
     </PlaceholderReference>
-    <PlaceholderReference Include="lcls2-cc-lib">
-      <DefaultResolution>lcls2-cc-lib, * (SLAC)</DefaultResolution>
-      <Namespace>lcls2_cc_lib</Namespace>
+    <PlaceholderReference Include="lcls-twincat-motion">
+      <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_motion</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="lcls-twincat-optics">
+      <DefaultResolution>lcls-twincat-optics, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_optics</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
@@ -219,19 +104,9 @@
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
     </PlaceholderReference>
-    <PlaceholderReference Include="Tc2_System">
-      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
-      <Namespace>Tc2_System</Namespace>
-    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_TcpIp">
       <DefaultResolution>Tc2_TcpIp, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_TcpIp</Namespace>
-      <Parameters>
-        <Parameter xmlns="">
-          <Key>TCPADS_MAXUDP_BUFFSIZE</Key>
-          <Value>16#8000</Value>
-        </Parameter>
-      </Parameters>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Utilities">
       <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
@@ -239,59 +114,7 @@
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
-      <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
-  </ItemGroup>
-  <ItemGroup>
-    <LibraryReference Include="lcls-twincat-motion,2.0.1,SLAC">
-      <Namespace>lcls_twincat_motion</Namespace>
-    </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.2.1,SLAC">
-      <Namespace>lcls_twincat_optics</Namespace>
-    </LibraryReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PlaceholderResolution Include="LCLS General">
-      <Resolution>LCLS General, 2.7.0 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="lcls-twincat-motion">
-      <Resolution>lcls-twincat-motion, 2.0.1 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="lcls2-cc-lib">
-      <Resolution>lcls2-cc-lib, 2.0.0 (SLAC)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="PMPS">
-      <Resolution>PMPS, 3.0.14 (SLAC - LCLS)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_MC2">
-      <Resolution>Tc2_MC2, 3.3.42.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_SerialCom">
-      <Resolution>Tc2_SerialCom, 3.3.7.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_Standard">
-      <Resolution>Tc2_Standard, 3.3.3.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_System">
-      <Resolution>Tc2_System, 3.4.24.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_TcpIp">
-      <Resolution>Tc2_TcpIp, 3.3.6.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc2_Utilities">
-      <Resolution>Tc2_Utilities, 3.3.41.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="Tc3_Module">
-      <Resolution>Tc3_Module, 3.3.21.0 (Beckhoff Automation GmbH)</Resolution>
-    </PlaceholderResolution>
-    <PlaceholderResolution Include="TcUnit">
-      <Resolution>TcUnit, 1.1.0.0 (www.tcunit.org)</Resolution>
-    </PlaceholderResolution>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="rixs_optics.tmc">
-      <SubType>Content</SubType>
-    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

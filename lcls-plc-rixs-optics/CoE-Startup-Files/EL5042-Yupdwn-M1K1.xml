@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<EtherCATMailbox>
+  <CoE>
+    <InitCmds>
+      <InitCmd>
+        <Transition>IP</Transition>
+        <Timeout>0</Timeout>
+        <Ccs>1</Ccs>
+        <Index>4339</Index>
+        <SubIndex>5</SubIndex>
+        <Data>0100</Data>
+      </InitCmd>
+    </InitCmds>
+  </CoE>
+</EtherCATMailbox>

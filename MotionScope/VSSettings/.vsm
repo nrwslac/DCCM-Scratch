@@ -5,12 +5,12 @@
   <Children>
     <Node>
       <Title>Mono</Title>
-      <Expanded>True</Expanded>
-      <FileName>C:\Users\nrw\plcprojs\lcls-plc-rixs-optics\MotionScope\Mono.tcscopex</FileName>
+      <Expanded>False</Expanded>
+      <FileName>C:\Users\User\Documents\TcXaeShell\lcls-plc-rixs-optics\MotionScope\Mono.tcscopex</FileName>
       <Children>
         <Node>
           <Title>DataPool</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -83,12 +83,12 @@
         </Node>
         <Node>
           <Title>Mono Grating Pitch</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>Position absolute</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -107,7 +107,7 @@
             </Node>
             <Node>
               <Title>Velocity</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -126,7 +126,7 @@
             </Node>
             <Node>
               <Title>Acceleration</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -145,7 +145,7 @@
             </Node>
             <Node>
               <Title>Position Lag</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -158,7 +158,7 @@
             </Node>
             <Node>
               <Title>Encoder</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>

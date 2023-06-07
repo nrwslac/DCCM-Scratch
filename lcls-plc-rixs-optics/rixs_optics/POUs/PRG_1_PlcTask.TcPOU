@@ -1,25 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_1_PlcTask" Id="{21f3a158-4837-47ff-8ec7-29454a44967d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_1_PlcTask
 VAR
-fbLogHandler: FB_LogHandler;
+//fbLogHandler: FB_LogHandler;
+	// PRG_DCCM_MONO: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[PRG_MR1K1_BEND();
-PRG_MR1K1_BEND_BENDER();
-PRG_MR1K2_SWITCH();
-PRG_SP1K1_MONO();
-PRG_SL1K2_EXIT();
-PRG_ST1K1_ZOS();
-//PRG_SPO_PMPS(); As per Jira Ticket LCLSECSD-249
-PRG_2_PMPS_POST();
-fbLogHandler();
-PRG_ZeroOrder_PMPS();
-PRG_MR2K2_FLAT();
-PRG_MR3K2_KBH();
-PRG_MR4K2_KBV();]]></ST>
+      <ST><![CDATA[PRG_DCCM_MONO();
+//fbLogHandler();
+]]></ST>
     </Implementation>
+    <LineIds Name="PRG_1_PlcTask">
+      <LineId Id="19" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

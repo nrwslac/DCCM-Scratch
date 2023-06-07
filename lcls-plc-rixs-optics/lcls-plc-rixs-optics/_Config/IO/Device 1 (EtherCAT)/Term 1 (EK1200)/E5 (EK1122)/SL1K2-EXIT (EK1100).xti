@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CFlbTermDef" SubType="9099">
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Box Id="125" BoxType="9099">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100"/>
+		<Box File="EL7047_SL1K2_PITCH.xti" Id="126">
+			<EtherCAT PortABoxInfo="#x0100007d"/>
+		</Box>
+		<Box File="EL7047_SL1K2_VERT.xti" Id="127">
+			<EtherCAT PortABoxInfo="#x0100007e"/>
+		</Box>
+		<Box File="EL7047_SL1K2_ROLL.xti" Id="128">
+			<EtherCAT PortABoxInfo="#x0100007f"/>
+		</Box>
+		<Box File="EL7047_SL1K2_GAP.xti" Id="129">
+			<EtherCAT PortABoxInfo="#x01000080"/>
+		</Box>
+		<Box File="EL7047_SL1K2_YAG.xti" Id="130">
+			<EtherCAT PortABoxInfo="#x01000081"/>
+		</Box>
+		<Box File="EL5042_SL1K2_PITCH_VERT.xti" Id="131">
+			<EtherCAT PortABoxInfo="#x01000082"/>
+		</Box>
+		<Box File="EL5042_SL1K2_ROLL_GAP.xti" Id="132">
+			<EtherCAT PortABoxInfo="#x01000083"/>
+		</Box>
+		<Box File="EL5042_SL1K2_YAG.xti" Id="133">
+			<EtherCAT PortABoxInfo="#x01000084"/>
+		</Box>
+		<Box File="EL3201_SL1K2_1.xti" Id="134">
+			<EtherCAT PortABoxInfo="#x01000085"/>
+		</Box>
+		<Box File="EL3201_SL1K2_2.xti" Id="135">
+			<EtherCAT PortABoxInfo="#x01000086"/>
+		</Box>
+		<Box File="EL3201_SL1K2_3.xti" Id="136">
+			<EtherCAT PortABoxInfo="#x01000087"/>
+		</Box>
+		<Box File="EL3201_SL1K2_4.xti" Id="137">
+			<EtherCAT PortABoxInfo="#x01000088"/>
+		</Box>
+		<Box File="EL2004_SL1K2.xti" Id="138">
+			<EtherCAT PortABoxInfo="#x01000089"/>
+		</Box>
+		<Box File="EL4004_SL1K2.xti" Id="57">
+			<EtherCAT PortABoxInfo="#x0100008a"/>
+		</Box>
+		<Box File="EL9011_SL1K2.xti" Id="162">
+			<EtherCAT PortABoxInfo="#x01000039"/>
+		</Box>
+	</Box>
+</TcSmItem>
