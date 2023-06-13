@@ -7,12 +7,6 @@ VAR
 //        i_DevName := 'DCCM-MONO',
 //        i_Desc := 'Fault occurs when device is in an usafe state',
 //        i_TypeCode := 16#E50);
-    fbBragg1: FB_MotionStage;
-	fbBragg2: FB_MotionStage;
-    fbTx: FB_MotionStage;
-    fbTxd: FB_MotionStage;
-    fbTyd: FB_MotionStage;
-    fbYag: FB_MotionStage;
 
 
 
@@ -24,7 +18,87 @@ VAR
     '}
      {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 8^Output'}
     bFanOn AT %Q*:BOOL;
+	
 
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:th1:POTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 1^Input'}
+	bTH1_POTL AT %Q*:BOOL;
+	
+		{attribute 'pytmc' := '
+        pv: DCCM:MONO:th1:NOTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 2^Input'}
+	bTH1_NOTL AT %Q*:BOOL;
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:th2:POTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 3^Input'}
+	bTH2_POTL AT %Q*:BOOL;
+	
+		{attribute 'pytmc' := '
+        pv: DCCM:MONO:th2:NOTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 4^Input'}
+	bTH2_NOTL AT %Q*:BOOL;
+	
+		{attribute 'pytmc' := '
+        pv: DCCM:MONO:tx:POTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 5^Input'}
+	bTX_POTL AT %Q*:BOOL;
+	
+		{attribute 'pytmc' := '
+        pv: DCCM:MONO:tx:NOTL
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 6^Input'}
+	bTX_NOTL AT %Q*:BOOL;
+	
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:STO
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 7^Input'}
+	bSTO AT %Q*:BOOL;
+
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:DI7
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 8^Input'}
+	bDI7 AT %Q*:BOOL;
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:A1
+    '}
+	{attribute 'TcLinkTo' :=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL3062_DCCM_A1_C1^AI Standard Channel 1^Value'}
+	wA1 AT %I*:INT;
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:C1
+    '}
+	{attribute 'TcLinkTo' :=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL3062_DCCM_A1_C1^AI Standard Channel 2^Value'}
+	wC1 AT %I*:INT;
+
+	
     bInit : BOOL:=TRUE;
 
      (*Motion Parameters*)
@@ -42,35 +116,47 @@ IF ( bInit) THEN
     bInit := FALSE;
 //    FFO.i_DevName := 'DCCM-MONO';
     //Bragg 1
-    Main.M1.bHardwareEnable := TRUE;
+    
+	Main.M1.bEnable:=TRUE;
     Main.M1.bPowerSelf :=TRUE;
     Main.M1.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M1.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
    //Bragg 2
-    Main.M2.bHardwareEnable := TRUE;
+    
     Main.M2.bPowerSelf :=TRUE;
     Main.M2.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M2.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TX
-    Main.M3.bHardwareEnable := TRUE;
+    
     Main.M3.bPowerSelf :=TRUE;
     Main.M3.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M3.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TXD
-    Main.M4.bHardwareEnable := TRUE;
+    
     Main.M4.bPowerSelf :=TRUE;
     Main.M4.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M4.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TYD
-    Main.M5.bHardwareEnable := TRUE;
+    
     Main.M5.bPowerSelf :=TRUE;
     Main.M5.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M5.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
 
- 
     //Turn on Fan by default
     bFanOn := TRUE;
 END_IF
+
+ 	fbMotionStage_m1  (stMotionStage:=M1);
+	fbMotionStage_m2  (stMotionStage:=M2);
+	fbMotionStage_m3  (stMotionStage:=M3);
+	fbMotionStage_m4  (stMotionStage:=M4);
+	fbMotionStage_m5  (stMotionStage:=M5);
+	
+	Main.M1.bHardwareEnable := bSTO AND bTH1_POTL AND bTH1_NOTL;
+	Main.M2.bHardwareEnable := bSTO AND bTH2_POTL AND bTH2_NOTL;
+	Main.M3.bHardwareEnable := bSTO AND bTX_POTL AND bTX_NOTL; 
+	
+	
 
 
 
@@ -79,9 +165,15 @@ END_IF
     <LineIds Name="PRG_DCCM_MONO">
       <LineId Id="3" Count="4" />
       <LineId Id="213" Count="0" />
+      <LineId Id="256" Count="0" />
       <LineId Id="9" Count="23" />
-      <LineId Id="36" Count="0" />
-      <LineId Id="53" Count="5" />
+      <LineId Id="53" Count="2" />
+      <LineId Id="257" Count="5" />
+      <LineId Id="264" Count="1" />
+      <LineId Id="347" Count="1" />
+      <LineId Id="346" Count="0" />
+      <LineId Id="263" Count="0" />
+      <LineId Id="56" Count="2" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

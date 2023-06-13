@@ -116,6 +116,11 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
     </PlaceholderReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="rixs_optics.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
