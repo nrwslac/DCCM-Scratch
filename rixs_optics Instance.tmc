@@ -29,12 +29,12 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-000700000004}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..3] OF OTCID</Name>
-			<BitSize>128</BitSize>
+			<Name GUID="{18071995-0000-0000-0000-000700000003}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..2] OF OTCID</Name>
+			<BitSize>96</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
 			<ArrayInfo>
 				<LBound>0</LBound>
-				<Elements>4</Elements>
+				<Elements>3</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -34922,8 +34922,8 @@ contributing fast faults, unless the FFO is currently vetoed.
 				</Parameter>
 				<Parameter ReadOnly="true">
 					<Name>Mapping OIDs</Name>
-					<BitSize>128</BitSize>
-					<BaseType GUID="{18071995-0000-0000-0000-000700000004}">ARRAY [0..3] OF OTCID</BaseType>
+					<BitSize>96</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000700000003}">ARRAY [0..2] OF OTCID</BaseType>
 					<PTCID>#x08500006</PTCID>
 				</Parameter>
 			</Parameters>
@@ -34932,7 +34932,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
 					<Name>PlcTask Inputs</Name>
 					<ContextId>0</ContextId>
-					<ByteSize>80281600</ByteSize>
+					<ByteSize>80150528</ByteSize>
 					<Symbol>
 						<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
 						<Comment><![CDATA[Raw encoder count]]></Comment>
@@ -34965,7 +34965,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597664</BitOffs>
+						<BitOffs>634588800</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.wC1</Name>
@@ -34986,7 +34986,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597680</BitOffs>
+						<BitOffs>634588816</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.Axis.NcToPlc</Name>
@@ -34998,7 +34998,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636387456</BitOffs>
+						<BitOffs>634590464</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.bLimitForwardEnable</Name>
@@ -35021,7 +35021,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395456</BitOffs>
+						<BitOffs>634598464</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.bLimitBackwardEnable</Name>
@@ -35044,7 +35044,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395464</BitOffs>
+						<BitOffs>634598472</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.bHome</Name>
@@ -35067,7 +35067,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395472</BitOffs>
+						<BitOffs>634598480</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.bHardwareEnable</Name>
@@ -35090,7 +35090,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395488</BitOffs>
+						<BitOffs>634598496</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.nRawEncoderULINT</Name>
@@ -35103,7 +35103,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395520</BitOffs>
+						<BitOffs>634598528</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.nRawEncoderUINT</Name>
@@ -35116,7 +35116,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395584</BitOffs>
+						<BitOffs>634598592</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.nRawEncoderINT</Name>
@@ -35129,7 +35129,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395600</BitOffs>
+						<BitOffs>634598608</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -35141,7 +35141,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636414144</BitOffs>
+						<BitOffs>634617152</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.Axis.NcToPlc</Name>
@@ -35153,7 +35153,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636712256</BitOffs>
+						<BitOffs>634915264</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.bLimitForwardEnable</Name>
@@ -35176,7 +35176,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720256</BitOffs>
+						<BitOffs>634923264</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.bLimitBackwardEnable</Name>
@@ -35199,7 +35199,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720264</BitOffs>
+						<BitOffs>634923272</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.bHome</Name>
@@ -35222,7 +35222,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720272</BitOffs>
+						<BitOffs>634923280</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.bHardwareEnable</Name>
@@ -35245,7 +35245,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720288</BitOffs>
+						<BitOffs>634923296</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.nRawEncoderULINT</Name>
@@ -35258,7 +35258,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720320</BitOffs>
+						<BitOffs>634923328</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.nRawEncoderUINT</Name>
@@ -35271,7 +35271,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720384</BitOffs>
+						<BitOffs>634923392</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.nRawEncoderINT</Name>
@@ -35284,7 +35284,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720400</BitOffs>
+						<BitOffs>634923408</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -35296,7 +35296,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636738944</BitOffs>
+						<BitOffs>634941952</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.Axis.NcToPlc</Name>
@@ -35308,7 +35308,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637037056</BitOffs>
+						<BitOffs>635240064</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.bLimitForwardEnable</Name>
@@ -35331,7 +35331,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045056</BitOffs>
+						<BitOffs>635248064</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.bLimitBackwardEnable</Name>
@@ -35354,7 +35354,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045064</BitOffs>
+						<BitOffs>635248072</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.bHome</Name>
@@ -35377,7 +35377,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045072</BitOffs>
+						<BitOffs>635248080</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.bHardwareEnable</Name>
@@ -35400,7 +35400,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045088</BitOffs>
+						<BitOffs>635248096</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.nRawEncoderULINT</Name>
@@ -35413,7 +35413,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045120</BitOffs>
+						<BitOffs>635248128</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.nRawEncoderUINT</Name>
@@ -35426,7 +35426,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045184</BitOffs>
+						<BitOffs>635248192</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.nRawEncoderINT</Name>
@@ -35439,7 +35439,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045200</BitOffs>
+						<BitOffs>635248208</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -35451,7 +35451,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637063744</BitOffs>
+						<BitOffs>635266752</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.Axis.NcToPlc</Name>
@@ -35463,7 +35463,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637361856</BitOffs>
+						<BitOffs>635564864</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.bLimitForwardEnable</Name>
@@ -35486,7 +35486,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369856</BitOffs>
+						<BitOffs>635572864</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.bLimitBackwardEnable</Name>
@@ -35509,7 +35509,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369864</BitOffs>
+						<BitOffs>635572872</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.bHome</Name>
@@ -35532,7 +35532,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369872</BitOffs>
+						<BitOffs>635572880</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.bHardwareEnable</Name>
@@ -35555,7 +35555,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369888</BitOffs>
+						<BitOffs>635572896</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.nRawEncoderULINT</Name>
@@ -35568,7 +35568,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369920</BitOffs>
+						<BitOffs>635572928</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.nRawEncoderUINT</Name>
@@ -35581,7 +35581,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369984</BitOffs>
+						<BitOffs>635572992</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.nRawEncoderINT</Name>
@@ -35594,7 +35594,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637370000</BitOffs>
+						<BitOffs>635573008</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -35606,7 +35606,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637388544</BitOffs>
+						<BitOffs>635591552</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.Axis.NcToPlc</Name>
@@ -35618,7 +35618,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637686656</BitOffs>
+						<BitOffs>635889664</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.bLimitForwardEnable</Name>
@@ -35641,7 +35641,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694656</BitOffs>
+						<BitOffs>635897664</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.bLimitBackwardEnable</Name>
@@ -35664,7 +35664,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694664</BitOffs>
+						<BitOffs>635897672</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.bHome</Name>
@@ -35687,7 +35687,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694672</BitOffs>
+						<BitOffs>635897680</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.bHardwareEnable</Name>
@@ -35710,7 +35710,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694688</BitOffs>
+						<BitOffs>635897696</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.nRawEncoderULINT</Name>
@@ -35723,7 +35723,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694720</BitOffs>
+						<BitOffs>635897728</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.nRawEncoderUINT</Name>
@@ -35736,7 +35736,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694784</BitOffs>
+						<BitOffs>635897792</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.nRawEncoderINT</Name>
@@ -35749,7 +35749,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694800</BitOffs>
+						<BitOffs>635897808</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -35761,14 +35761,14 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Input</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637713344</BitOffs>
+						<BitOffs>635916352</BitOffs>
 					</Symbol>
 				</DataArea>
 				<DataArea>
 					<AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
 					<Name>PlcTask Outputs</Name>
 					<ContextId>0</ContextId>
-					<ByteSize>80281600</ByteSize>
+					<ByteSize>80150528</ByteSize>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bFanOn</Name>
 						<Comment><![CDATA[    FFO    :    FB_FastFault :=(
@@ -35819,7 +35819,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597520</BitOffs>
+						<BitOffs>634534392</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bTH1_NOTL</Name>
@@ -35843,7 +35843,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597528</BitOffs>
+						<BitOffs>634588736</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bTH2_POTL</Name>
@@ -35867,7 +35867,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597536</BitOffs>
+						<BitOffs>634588744</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bTH2_NOTL</Name>
@@ -35891,7 +35891,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597544</BitOffs>
+						<BitOffs>634588752</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bTX_POTL</Name>
@@ -35915,7 +35915,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597552</BitOffs>
+						<BitOffs>634588760</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bTX_NOTL</Name>
@@ -35939,7 +35939,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597560</BitOffs>
+						<BitOffs>634588768</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bSTO</Name>
@@ -35963,7 +35963,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597648</BitOffs>
+						<BitOffs>634588776</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.bDI7</Name>
@@ -35987,7 +35987,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>634597656</BitOffs>
+						<BitOffs>634588784</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.Axis.PlcToNc</Name>
@@ -35999,7 +35999,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636386432</BitOffs>
+						<BitOffs>634589440</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1.bBrakeRelease</Name>
@@ -36022,7 +36022,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636395480</BitOffs>
+						<BitOffs>634598488</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -36034,7 +36034,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636413120</BitOffs>
+						<BitOffs>634616128</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.Axis.PlcToNc</Name>
@@ -36046,7 +36046,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636711232</BitOffs>
+						<BitOffs>634914240</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2.bBrakeRelease</Name>
@@ -36069,7 +36069,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636720280</BitOffs>
+						<BitOffs>634923288</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -36081,7 +36081,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>636737920</BitOffs>
+						<BitOffs>634940928</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.Axis.PlcToNc</Name>
@@ -36093,7 +36093,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637036032</BitOffs>
+						<BitOffs>635239040</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3.bBrakeRelease</Name>
@@ -36116,7 +36116,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637045080</BitOffs>
+						<BitOffs>635248088</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -36128,7 +36128,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637062720</BitOffs>
+						<BitOffs>635265728</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.Axis.PlcToNc</Name>
@@ -36140,7 +36140,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637360832</BitOffs>
+						<BitOffs>635563840</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4.bBrakeRelease</Name>
@@ -36163,7 +36163,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637369880</BitOffs>
+						<BitOffs>635572888</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -36175,7 +36175,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637387520</BitOffs>
+						<BitOffs>635590528</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.Axis.PlcToNc</Name>
@@ -36187,7 +36187,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637685632</BitOffs>
+						<BitOffs>635888640</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5.bBrakeRelease</Name>
@@ -36210,7 +36210,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637694680</BitOffs>
+						<BitOffs>635897688</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -36222,14 +36222,14 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>Output</Value>
 							</Property>
 						</Properties>
-						<BitOffs>637712320</BitOffs>
+						<BitOffs>635915328</BitOffs>
 					</Symbol>
 				</DataArea>
 				<DataArea>
 					<AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
 					<Name>PlcTask Internal</Name>
 					<ContextId>0</ContextId>
-					<ByteSize>80281600</ByteSize>
+					<ByteSize>80150528</ByteSize>
 					<Symbol>
 						<Name>DefaultGlobals.stSys</Name>
 						<Comment><![CDATA[Included for you]]></Comment>
@@ -41332,15 +41332,6 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<BitOffs>634534368</BitOffs>
 					</Symbol>
 					<Symbol>
-						<Name>PRG_DCCM_MONO.bInit</Name>
-						<BitSize>8</BitSize>
-						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
-						<Default>
-							<Bool>true</Bool>
-						</Default>
-						<BitOffs>634534392</BitOffs>
-					</Symbol>
-					<Symbol>
 						<Name>PMPS_PARAM.MAX_ASSERTIONS</Name>
 						<Comment><![CDATA[Maximum number of BP requests in the arbiter]]></Comment>
 						<BitSize>32</BitSize>
@@ -41662,6 +41653,60 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<BitOffs>634545440</BitOffs>
 					</Symbol>
 					<Symbol>
+						<Name>PRG_DCCM_MONO.bInit</Name>
+						<BitSize>8</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+						<Default>
+							<Bool>true</Bool>
+						</Default>
+						<BitOffs>634588792</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Constants.bLittleEndian</Name>
+						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
+						<BitSize>8</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+						<Default>
+							<Bool>true</Bool>
+						</Default>
+						<Properties>
+							<Property>
+								<Name>TcVarGlobal</Name>
+							</Property>
+						</Properties>
+						<BitOffs>634588840</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Constants.bSimulationMode</Name>
+						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
+						<BitSize>8</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+						<Default>
+							<Bool>false</Bool>
+						</Default>
+						<Properties>
+							<Property>
+								<Name>TcVarGlobal</Name>
+							</Property>
+						</Properties>
+						<BitOffs>634588848</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>Constants.bFPUSupport</Name>
+						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
+						<BitSize>8</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+						<Default>
+							<Bool>true</Bool>
+						</Default>
+						<Properties>
+							<Property>
+								<Name>TcVarGlobal</Name>
+							</Property>
+						</Properties>
+						<BitOffs>634588856</BitOffs>
+					</Symbol>
+					<Symbol>
 						<Name>PRG_DCCM_MONO.fSmallDelta</Name>
 						<Comment><![CDATA[Motion Parameters]]></Comment>
 						<BitSize>64</BitSize>
@@ -41669,7 +41714,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Default>
 							<Value>0.01</Value>
 						</Default>
-						<BitOffs>636385856</BitOffs>
+						<BitOffs>634588864</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.fBigDelta</Name>
@@ -41678,7 +41723,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Default>
 							<Value>10</Value>
 						</Default>
-						<BitOffs>636385920</BitOffs>
+						<BitOffs>634588928</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.fMaxVelocity</Name>
@@ -41687,7 +41732,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Default>
 							<Value>0.5</Value>
 						</Default>
-						<BitOffs>636385984</BitOffs>
+						<BitOffs>634588992</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.fHighAccel</Name>
@@ -41696,7 +41741,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Default>
 							<Value>0.8</Value>
 						</Default>
-						<BitOffs>636386048</BitOffs>
+						<BitOffs>634589056</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>PRG_DCCM_MONO.fLowAccel</Name>
@@ -41705,7 +41750,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Default>
 							<Value>0.1</Value>
 						</Default>
-						<BitOffs>636386112</BitOffs>
+						<BitOffs>634589120</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>GVL_DCCM_MONO.nM2K2X_ENC_REF</Name>
@@ -41720,7 +41765,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>636386176</BitOffs>
+						<BitOffs>634589184</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>GVL_DCCM_MONO.nM2K2Y_ENC_REF</Name>
@@ -41735,7 +41780,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>636386240</BitOffs>
+						<BitOffs>634589248</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>GVL_DCCM_MONO.nM2K2rX_ENC_REF</Name>
@@ -41750,7 +41795,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>636386304</BitOffs>
+						<BitOffs>634589312</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M1</Name>
@@ -41787,7 +41832,7 @@ contributing fast faults, unless the FFO is currently vetoed.
     </Value>
 							</Property>
 						</Properties>
-						<BitOffs>636386368</BitOffs>
+						<BitOffs>634589376</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m1</Name>
@@ -41798,7 +41843,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>636411648</BitOffs>
+						<BitOffs>634614656</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M2</Name>
@@ -41835,7 +41880,7 @@ contributing fast faults, unless the FFO is currently vetoed.
     </Value>
 							</Property>
 						</Properties>
-						<BitOffs>636711168</BitOffs>
+						<BitOffs>634914176</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m2</Name>
@@ -41846,7 +41891,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>636736448</BitOffs>
+						<BitOffs>634939456</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M3</Name>
@@ -41883,7 +41928,7 @@ contributing fast faults, unless the FFO is currently vetoed.
     </Value>
 							</Property>
 						</Properties>
-						<BitOffs>637035968</BitOffs>
+						<BitOffs>635238976</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m3</Name>
@@ -41894,7 +41939,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>637061248</BitOffs>
+						<BitOffs>635264256</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M4</Name>
@@ -41931,7 +41976,7 @@ contributing fast faults, unless the FFO is currently vetoed.
     </Value>
 							</Property>
 						</Properties>
-						<BitOffs>637360768</BitOffs>
+						<BitOffs>635563776</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m4</Name>
@@ -41942,7 +41987,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>637386048</BitOffs>
+						<BitOffs>635589056</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.M5</Name>
@@ -41979,7 +42024,7 @@ contributing fast faults, unless the FFO is currently vetoed.
     </Value>
 							</Property>
 						</Properties>
-						<BitOffs>637685568</BitOffs>
+						<BitOffs>635888576</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Main.fbMotionStage_m5</Name>
@@ -41990,22 +42035,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>637710848</BitOffs>
-					</Symbol>
-					<Symbol>
-						<Name>Constants.bLittleEndian</Name>
-						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
-						<BitSize>8</BitSize>
-						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
-						<Default>
-							<Bool>true</Bool>
-						</Default>
-						<Properties>
-							<Property>
-								<Name>TcVarGlobal</Name>
-							</Property>
-						</Properties>
-						<BitOffs>638010376</BitOffs>
+						<BitOffs>635913856</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.RuntimeVersion</Name>
@@ -42035,7 +42065,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010384</BitOffs>
+						<BitOffs>636213376</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.CompilerVersion</Name>
@@ -42065,37 +42095,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010448</BitOffs>
-					</Symbol>
-					<Symbol>
-						<Name>Constants.bSimulationMode</Name>
-						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
-						<BitSize>8</BitSize>
-						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
-						<Default>
-							<Bool>false</Bool>
-						</Default>
-						<Properties>
-							<Property>
-								<Name>TcVarGlobal</Name>
-							</Property>
-						</Properties>
-						<BitOffs>638010512</BitOffs>
-					</Symbol>
-					<Symbol>
-						<Name>Constants.bFPUSupport</Name>
-						<Comment><![CDATA[ Does the target support multiple cores?]]></Comment>
-						<BitSize>8</BitSize>
-						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
-						<Default>
-							<Bool>true</Bool>
-						</Default>
-						<Properties>
-							<Property>
-								<Name>TcVarGlobal</Name>
-							</Property>
-						</Properties>
-						<BitOffs>638010520</BitOffs>
+						<BitOffs>636213440</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.nRegisterSize</Name>
@@ -42110,7 +42110,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010528</BitOffs>
+						<BitOffs>636213504</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.nPackMode</Name>
@@ -42125,7 +42125,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010544</BitOffs>
+						<BitOffs>636213520</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.RuntimeVersionNumeric</Name>
@@ -42140,7 +42140,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010560</BitOffs>
+						<BitOffs>636213536</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.CompilerVersionNumeric</Name>
@@ -42155,7 +42155,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010592</BitOffs>
+						<BitOffs>636213568</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>Constants.bMulticoreSupport</Name>
@@ -42169,7 +42169,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010624</BitOffs>
+						<BitOffs>636213600</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -42184,7 +42184,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>TcVarGlobal</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638010656</BitOffs>
+						<BitOffs>636213632</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -42198,21 +42198,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>no_init</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638011680</BitOffs>
-					</Symbol>
-					<Symbol>
-						<Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
-						<BitSize>32</BitSize>
-						<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-						<Properties>
-							<Property>
-								<Name>TcVarGlobal</Name>
-							</Property>
-							<Property>
-								<Name>no_init</Name>
-							</Property>
-						</Properties>
-						<BitOffs>638013728</BitOffs>
+						<BitOffs>636214656</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -42230,7 +42216,21 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>no_init</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638013760</BitOffs>
+						<BitOffs>636216704</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
+						<BitSize>32</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+						<Properties>
+							<Property>
+								<Name>TcVarGlobal</Name>
+							</Property>
+							<Property>
+								<Name>no_init</Name>
+							</Property>
+						</Properties>
+						<BitOffs>636217728</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -42244,7 +42244,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Name>no_init</Name>
 							</Property>
 						</Properties>
-						<BitOffs>638014784</BitOffs>
+						<BitOffs>636217760</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -42265,7 +42265,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>PlcTask</Value>
 							</Property>
 						</Properties>
-						<BitOffs>638014816</BitOffs>
+						<BitOffs>636217792</BitOffs>
 					</Symbol>
 					<Symbol>
 						<Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -42291,14 +42291,14 @@ contributing fast faults, unless the FFO is currently vetoed.
 								<Value>C0228</Value>
 							</Property>
 						</Properties>
-						<BitOffs>638066464</BitOffs>
+						<BitOffs>636269440</BitOffs>
 					</Symbol>
 				</DataArea>
 				<DataArea>
 					<AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
 					<Name>PlcTask Retains</Name>
 					<ContextId>0</ContextId>
-					<ByteSize>80281600</ByteSize>
+					<ByteSize>80150528</ByteSize>
 					<Symbol>
 						<Name>PMPS_GVL.SuccessfulPreemption</Name>
 						<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
@@ -42362,7 +42362,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 				</Property>
 				<Property>
 					<Name>ChangeDate</Name>
-					<Value>2023-06-13T13:27:02</Value>
+					<Value>2023-06-14T13:13:30</Value>
 				</Property>
 				<Property>
 					<Name>GeneratedCodeSize</Name>
