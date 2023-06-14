@@ -2380,7 +2380,7 @@ External Setpoint Generation:
 			<Name>NC-Task 1 SVB</Name>
 		</SvbTask>
 		<AxisFolder Name="DCCM"/>
-		<Axis Id="19" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="1" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="19">
 			<Name>DCCM-th1-M1</Name>
 			<AxisPara>
 				<Dynamic Acceleration="8.99313" Deceleration="8.99313" Jerk="27.7544"/>
@@ -2544,7 +2544,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="20" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="17">
+		<Axis Id="2" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="17">
 			<Name>DCCM-th2-M2</Name>
 			<AxisPara>
 				<Dynamic Acceleration="2.95205" Deceleration="2.95205" Jerk="8.98412"/>
@@ -2709,7 +2709,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="21" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="3" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="21">
 			<Name>DCCM-tx-M3</Name>
 			<AxisPara>
 				<Dynamic Acceleration="0.424188" Deceleration="0.424188" Jerk="6.42628"/>
@@ -2874,7 +2874,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="22" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="4" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="22">
 			<Name>DCCM-txd-M4</Name>
 			<AxisPara>
 				<Dynamic Acceleration="1.59597" Deceleration="1.59597" Jerk="4.61435"/>
@@ -3040,7 +3040,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="23" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="5" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="23">
 			<Name>DCCM-tyd-M5</Name>
 			<AxisPara>
 				<Dynamic Acceleration="4.26689" Deceleration="4.26689" Jerk="19.1646"/>
@@ -3205,7 +3205,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="1" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="6" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="1">
 			<Name>DCCM-th1-M1_encoder</Name>
 			<AxisPara>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
@@ -3337,7 +3337,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="2" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="7" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="2">
 			<Name>DCCM-th2-M2_encoder</Name>
 			<AxisPara>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
@@ -3469,7 +3469,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="3" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="8" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="3">
 			<Name>DCCM-tx-M3_encoder</Name>
 			<AxisPara>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
@@ -3601,7 +3601,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="4" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="9" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="4">
 			<Name>DCCM-txd-M4_encoder</Name>
 			<AxisPara>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
@@ -3733,7 +3733,7 @@ External Setpoint Generation:
 				</Var>
 			</Vars>
 		</Axis>
-		<Axis Id="5" CreateSymbols="true" AxisType="1" AxisFolder="DCCM">
+		<Axis Id="10" CreateSymbols="true" AxisType="1" AxisFolder="DCCM" GroupId="5">
 			<Name>DCCM-tyd-M5_encoder</Name>
 			<AxisPara>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
