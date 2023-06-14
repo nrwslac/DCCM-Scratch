@@ -29,12 +29,12 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-000700000003}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..2] OF OTCID</Name>
-			<BitSize>96</BitSize>
+			<Name GUID="{18071995-0000-0000-0000-000700000004}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..3] OF OTCID</Name>
+			<BitSize>128</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
 			<ArrayInfo>
 				<LBound>0</LBound>
-				<Elements>3</Elements>
+				<Elements>4</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -1329,22 +1329,22 @@ External Setpoint Generation:
 			</Method>
 		</DataType>
 		<DataType>
-			<Name GUID="{BEB09555-20C0-D1B6-F450-0C22FBC0EE73}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcSourceInfo</Name>
+			<Name GUID="{A71B2A6C-7FCA-1863-6AD2-C5C6EB969F68}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcSourceInfo</Name>
 			<BitSize>2848</BitSize>
 			<Implements GUID="{245035E3-324A-7187-D524-348A179D81F2}" Namespace="LCLS_General.Tc3_EventLogger">true</Implements>
 			<PropertyItem>
 				<Name>nId</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771008</GetCodeOffs>
-				<SetCodeOffs>79771032</SetCodeOffs>
+				<GetCodeOffs>79546380</GetCodeOffs>
+				<SetCodeOffs>79546404</SetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>sName</Name>
 				<Type GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</Type>
 				<BitSize>2048</BitSize>
-				<GetCodeOffs>79771048</GetCodeOffs>
-				<SetCodeOffs>79771060</SetCodeOffs>
+				<GetCodeOffs>79546420</GetCodeOffs>
+				<SetCodeOffs>79546432</SetCodeOffs>
 				<Properties>
 					<Property>
 						<Name>TcEncoding</Name>
@@ -1527,37 +1527,37 @@ External Setpoint Generation:
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_AsyncStrResult</Name>
+			<Name GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_AsyncStrResult</Name>
 			<BitSize>64</BitSize>
 			<PropertyItem>
 				<Name>bBusy</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
 				<BitSize>8</BitSize>
-				<GetCodeOffs>79771072</GetCodeOffs>
+				<GetCodeOffs>79546444</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>bError</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
 				<BitSize>8</BitSize>
-				<GetCodeOffs>79771108</GetCodeOffs>
+				<GetCodeOffs>79546480</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>hrErrorCode</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771116</GetCodeOffs>
+				<GetCodeOffs>79546488</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>nStringSize</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771096</GetCodeOffs>
+				<GetCodeOffs>79546468</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>sResult</Name>
 				<Type GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</Type>
 				<BitSize>2048</BitSize>
-				<GetCodeOffs>79771112</GetCodeOffs>
+				<GetCodeOffs>79546484</GetCodeOffs>
 				<Properties>
 					<Property>
 						<Name>TcEncoding</Name>
@@ -2632,12 +2632,12 @@ External Setpoint Generation:
 			</Method>
 		</DataType>
 		<DataType>
-			<Name GUID="{33CEF50D-4952-900A-9599-75C4538819EA}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcEventBase</Name>
+			<Name GUID="{D3C97A9D-EC2B-51CA-F8C9-BC6FDF490E9D}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcEventBase</Name>
 			<BitSize>3424</BitSize>
 			<Implements GUID="{3C791CFF-7BC3-546F-D960-4E9B87060FE4}" Namespace="LCLS_General.Tc3_EventLogger">true</Implements>
 			<SubItem>
 				<Name>fbSourceInfo</Name>
-				<Type GUID="{BEB09555-20C0-D1B6-F450-0C22FBC0EE73}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcSourceInfo</Type>
+				<Type GUID="{A71B2A6C-7FCA-1863-6AD2-C5C6EB969F68}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcSourceInfo</Type>
 				<BitSize>2848</BitSize>
 				<BitOffs>256</BitOffs>
 				<Properties>
@@ -2648,7 +2648,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>__FB_TCEVENTBASE__REQUESTEVENTCLASSNAME__FBRESULT</Name>
-				<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
+				<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
 				<BitSize>64</BitSize>
 				<BitOffs>3232</BitOffs>
 				<Properties>
@@ -2670,7 +2670,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>__FB_TCEVENTBASE__REQUESTEVENTTEXT__FBRESULT</Name>
-				<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
+				<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
 				<BitSize>64</BitSize>
 				<BitOffs>3328</BitOffs>
 				<Properties>
@@ -2694,31 +2694,31 @@ External Setpoint Generation:
 				<Name>eSeverity</Name>
 				<Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
 				<BitSize>16</BitSize>
-				<GetCodeOffs>79771164</GetCodeOffs>
+				<GetCodeOffs>79546536</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>ipSourceInfo</Name>
 				<Type GUID="{245035E3-324A-7187-D524-348A179D81F2}" Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771144</GetCodeOffs>
+				<GetCodeOffs>79546516</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>nEventId</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771232</GetCodeOffs>
+				<GetCodeOffs>79546604</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>nUniqueId</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
 				<BitSize>32</BitSize>
-				<GetCodeOffs>79771236</GetCodeOffs>
+				<GetCodeOffs>79546608</GetCodeOffs>
 			</PropertyItem>
 			<PropertyItem>
 				<Name>sEventClassName</Name>
 				<Type GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</Type>
 				<BitSize>2048</BitSize>
-				<GetCodeOffs>79771192</GetCodeOffs>
+				<GetCodeOffs>79546564</GetCodeOffs>
 				<Properties>
 					<Property>
 						<Name>TcEncoding</Name>
@@ -2730,7 +2730,7 @@ External Setpoint Generation:
 				<Name>sEventText</Name>
 				<Type GUID="{18071995-0000-0000-0000-0001000000FF}">STRING(255)</Type>
 				<BitSize>2048</BitSize>
-				<GetCodeOffs>79771240</GetCodeOffs>
+				<GetCodeOffs>79546612</GetCodeOffs>
 				<Properties>
 					<Property>
 						<Name>TcEncoding</Name>
@@ -2766,7 +2766,7 @@ External Setpoint Generation:
 				</Parameter>
 				<Parameter>
 					<Name>fbResult</Name>
-					<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_AsyncStrResult</Type>
+					<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_AsyncStrResult</Type>
 					<BitSize>32</BitSize>
 					<Properties>
 						<Property>
@@ -2975,7 +2975,7 @@ External Setpoint Generation:
 				</Parameter>
 				<Local>
 					<Name>fbResult</Name>
-					<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
+					<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
 					<BitSize>64</BitSize>
 					<Properties>
 						<Property>
@@ -3046,7 +3046,7 @@ External Setpoint Generation:
 				</Parameter>
 				<Parameter>
 					<Name>fbResult</Name>
-					<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_AsyncStrResult</Type>
+					<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_AsyncStrResult</Type>
 					<BitSize>32</BitSize>
 					<Properties>
 						<Property>
@@ -3141,7 +3141,7 @@ External Setpoint Generation:
 				</Parameter>
 				<Local>
 					<Name>fbResult</Name>
-					<Type GUID="{649DA782-4104-B995-813A-DD8A3812488C}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
+					<Type GUID="{6D65D090-833C-9F98-0734-4AB75EE2DF31}" Namespace="LCLS_General.Tc3_EventLogger">FB_AsyncStrResult</Type>
 					<BitSize>64</BitSize>
 					<Properties>
 						<Property>
@@ -3317,15 +3317,15 @@ External Setpoint Generation:
 			</Method>
 		</DataType>
 		<DataType>
-			<Name GUID="{CD95ECD9-CBAC-3F50-8BC8-9906AA4A85D8}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcMessage</Name>
+			<Name GUID="{C0A1C502-74C3-EBD5-54C4-AEBE02A7F515}" Namespace="LCLS_General.Tc3_EventLogger" AutoDeleteType="true">FB_TcMessage</Name>
 			<BitSize>3488</BitSize>
-			<ExtendsType GUID="{33CEF50D-4952-900A-9599-75C4538819EA}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcEventBase</ExtendsType>
+			<ExtendsType GUID="{D3C97A9D-EC2B-51CA-F8C9-BC6FDF490E9D}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcEventBase</ExtendsType>
 			<Implements GUID="{6F8CAB07-2AF6-9E18-C6FA-813670DECBAD}" Namespace="LCLS_General.Tc3_EventLogger">true</Implements>
 			<PropertyItem>
 				<Name>nTimeSent</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
 				<BitSize>64</BitSize>
-				<GetCodeOffs>79771268</GetCodeOffs>
+				<GetCodeOffs>79546640</GetCodeOffs>
 				<Properties>
 					<Property>
 						<Name>TcDisplayTypeGUID</Name>
@@ -3619,7 +3619,7 @@ External Setpoint Generation:
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{A3D0BD13-71C0-855C-78E9-BA2BA7260211}" Namespace="LCLS_General" AutoDeleteType="true">FB_LogMessage</Name>
+			<Name GUID="{CDD58499-7C35-5F61-7AC4-7A9EFBCAAE2D}" Namespace="LCLS_General" AutoDeleteType="true">FB_LogMessage</Name>
 			<BitSize>81984</BitSize>
 			<SubItem>
 				<Name>sMsg</Name>
@@ -3784,13 +3784,13 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>fbMessage</Name>
-				<Type GUID="{CD95ECD9-CBAC-3F50-8BC8-9906AA4A85D8}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_TcMessage</Type>
+				<Type GUID="{C0A1C502-74C3-EBD5-54C4-AEBE02A7F515}" Namespace="LCLS_General.Tc3_EventLogger" ReferenceTo="true">FB_TcMessage</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>58912</BitOffs>
 			</SubItem>
 			<SubItem>
 				<Name>fbMessages</Name>
-				<Type GUID="{CD95ECD9-CBAC-3F50-8BC8-9906AA4A85D8}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcMessage</Type>
+				<Type GUID="{C0A1C502-74C3-EBD5-54C4-AEBE02A7F515}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcMessage</Type>
 				<ArrayInfo>
 					<LBound>0</LBound>
 					<Elements>5</Elements>
@@ -3800,7 +3800,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>fbSource</Name>
-				<Type GUID="{BEB09555-20C0-D1B6-F450-0C22FBC0EE73}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcSourceInfo</Type>
+				<Type GUID="{A71B2A6C-7FCA-1863-6AD2-C5C6EB969F68}" Namespace="LCLS_General.Tc3_EventLogger">FB_TcSourceInfo</Type>
 				<BitSize>2848</BitSize>
 				<BitOffs>76384</BitOffs>
 			</SubItem>
@@ -16366,7 +16366,7 @@ External Setpoint Generation:
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{723E7CD7-19D8-0C21-EEEC-B779BF8A6088}" Namespace="PMPS" AutoDeleteType="true">FB_HardwareFFOutput</Name>
+			<Name GUID="{0FFAB6AA-D035-4BD5-750D-6517375C19CF}" Namespace="PMPS" AutoDeleteType="true">FB_HardwareFFOutput</Name>
 			<BitSize>495296</BitSize>
 			<SubItem>
 				<Name>FF_ARRAY_UPPER_BOUND</Name>
@@ -16635,7 +16635,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>fbLogger</Name>
-				<Type GUID="{A3D0BD13-71C0-855C-78E9-BA2BA7260211}" Namespace="LCLS_General">FB_LogMessage</Type>
+				<Type GUID="{CDD58499-7C35-5F61-7AC4-7A9EFBCAAE2D}" Namespace="LCLS_General">FB_LogMessage</Type>
 				<BitSize>81984</BitSize>
 				<BitOffs>413056</BitOffs>
 				<Default>
@@ -19601,7 +19601,7 @@ External Setpoint Generation:
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{255E29FB-A4DF-49C3-A88F-7E66895E6221}" Namespace="PMPS" AutoDeleteType="true">FB_FastFault</Name>
+			<Name GUID="{D54E2F3E-65B0-663E-A77F-306481099A2B}" Namespace="PMPS" AutoDeleteType="true">FB_FastFault</Name>
 			<Comment><![CDATA[ Fast Fault
 2019-9-13 A. Wallace
 
@@ -19731,7 +19731,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>io_fbFFHWO</Name>
-				<Type GUID="{723E7CD7-19D8-0C21-EEEC-B779BF8A6088}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+				<Type GUID="{0FFAB6AA-D035-4BD5-750D-6517375C19CF}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
 				<Comment><![CDATA[Point to FB_HardwareFFOutput of your choice]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>4192</BitOffs>
@@ -19810,7 +19810,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{BE87E6DF-B8BB-42B6-2874-DF9B1855457D}" Namespace="PMPS" AutoDeleteType="true">FB_JsonFileToJsonDoc</Name>
+			<Name GUID="{D9B09DB0-D6F9-554A-5F2A-4D92E33DCE7B}" Namespace="PMPS" AutoDeleteType="true">FB_JsonFileToJsonDoc</Name>
 			<BitSize>928512</BitSize>
 			<SubItem>
 				<Name>bExecute</Name>
@@ -19935,7 +19935,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>io_fbFFHWO</Name>
-				<Type GUID="{723E7CD7-19D8-0C21-EEEC-B779BF8A6088}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+				<Type GUID="{0FFAB6AA-D035-4BD5-750D-6517375C19CF}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>3712</BitOffs>
 				<Properties>
@@ -20073,7 +20073,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>fbLogger</Name>
-				<Type GUID="{A3D0BD13-71C0-855C-78E9-BA2BA7260211}" Namespace="LCLS_General">FB_LogMessage</Type>
+				<Type GUID="{CDD58499-7C35-5F61-7AC4-7A9EFBCAAE2D}" Namespace="LCLS_General">FB_LogMessage</Type>
 				<BitSize>81984</BitSize>
 				<BitOffs>821440</BitOffs>
 				<Default>
@@ -20089,7 +20089,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>FFO</Name>
-				<Type GUID="{255E29FB-A4DF-49C3-A88F-7E66895E6221}" Namespace="PMPS">FB_FastFault</Type>
+				<Type GUID="{D54E2F3E-65B0-663E-A77F-306481099A2B}" Namespace="PMPS">FB_FastFault</Type>
 				<Comment><![CDATA[FFO]]></Comment>
 				<BitSize>25088</BitSize>
 				<BitOffs>903424</BitOffs>
@@ -20118,11 +20118,11 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{69CBBA9F-B248-53E4-872A-0BE75711D2F6}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_Standard_PMPSDB</Name>
+			<Name GUID="{0EBFD1E8-32D6-9FFF-D733-103250465505}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_Standard_PMPSDB</Name>
 			<BitSize>27744</BitSize>
 			<SubItem>
 				<Name>io_fbFFHWO</Name>
-				<Type GUID="{723E7CD7-19D8-0C21-EEEC-B779BF8A6088}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
+				<Type GUID="{0FFAB6AA-D035-4BD5-750D-6517375C19CF}" Namespace="PMPS" ReferenceTo="true">FB_HardwareFFOutput</Type>
 				<BitSize>32</BitSize>
 				<BitOffs>32</BitOffs>
 				<Properties>
@@ -33476,7 +33476,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{420E60A1-FA8B-7EAE-B8F3-BE326C20A0C2}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_LogMotionError</Name>
+			<Name GUID="{7C7431C6-7566-7BA7-A701-921341BD97D1}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_LogMotionError</Name>
 			<BitSize>83136</BitSize>
 			<SubItem>
 				<Name>stMotionStage</Name>
@@ -33504,7 +33504,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>fbLogMessage</Name>
-				<Type GUID="{A3D0BD13-71C0-855C-78E9-BA2BA7260211}" Namespace="LCLS_General">FB_LogMessage</Type>
+				<Type GUID="{CDD58499-7C35-5F61-7AC4-7A9EFBCAAE2D}" Namespace="LCLS_General">FB_LogMessage</Type>
 				<BitSize>81984</BitSize>
 				<BitOffs>128</BitOffs>
 			</SubItem>
@@ -33804,7 +33804,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</Properties>
 		</DataType>
 		<DataType>
-			<Name GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_MotionStage</Name>
+			<Name GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}" Namespace="lcls_twincat_motion" AutoDeleteType="true">FB_MotionStage</Name>
 			<BitSize>299520</BitSize>
 			<SubItem>
 				<Name>stMotionStage</Name>
@@ -33838,7 +33838,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 			</SubItem>
 			<SubItem>
 				<Name>fbLogError</Name>
-				<Type GUID="{420E60A1-FA8B-7EAE-B8F3-BE326C20A0C2}" Namespace="lcls_twincat_motion">FB_LogMotionError</Type>
+				<Type GUID="{7C7431C6-7566-7BA7-A701-921341BD97D1}" Namespace="lcls_twincat_motion">FB_LogMotionError</Type>
 				<BitSize>83136</BitSize>
 				<BitOffs>213504</BitOffs>
 			</SubItem>
@@ -34922,8 +34922,8 @@ contributing fast faults, unless the FFO is currently vetoed.
 				</Parameter>
 				<Parameter ReadOnly="true">
 					<Name>Mapping OIDs</Name>
-					<BitSize>96</BitSize>
-					<BaseType GUID="{18071995-0000-0000-0000-000700000003}">ARRAY [0..2] OF OTCID</BaseType>
+					<BitSize>128</BitSize>
+					<BaseType GUID="{18071995-0000-0000-0000-000700000004}">ARRAY [0..3] OF OTCID</BaseType>
 					<PTCID>#x08500006</PTCID>
 				</Parameter>
 			</Parameters>
@@ -36538,7 +36538,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 						<Name>GVL_Logger.fbRootLogger</Name>
 						<Comment><![CDATA[Instantiated here to be used everywhere]]></Comment>
 						<BitSize>81984</BitSize>
-						<BaseType GUID="{A3D0BD13-71C0-855C-78E9-BA2BA7260211}">LCLS_General.FB_LogMessage</BaseType>
+						<BaseType GUID="{CDD58499-7C35-5F61-7AC4-7A9EFBCAAE2D}">LCLS_General.FB_LogMessage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -40916,7 +40916,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>MOTION_GVL.fbPmpsFileReader</Name>
 						<BitSize>928512</BitSize>
-						<BaseType GUID="{BE87E6DF-B8BB-42B6-2874-DF9B1855457D}">PMPS.FB_JsonFileToJsonDoc</BaseType>
+						<BaseType GUID="{D9B09DB0-D6F9-554A-5F2A-4D92E33DCE7B}">PMPS.FB_JsonFileToJsonDoc</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -40927,7 +40927,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>MOTION_GVL.fbStandardPMPSDB</Name>
 						<BitSize>27744</BitSize>
-						<BaseType GUID="{69CBBA9F-B248-53E4-872A-0BE75711D2F6}">lcls_twincat_motion.FB_Standard_PMPSDB</BaseType>
+						<BaseType GUID="{0EBFD1E8-32D6-9FFF-D733-103250465505}">lcls_twincat_motion.FB_Standard_PMPSDB</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -41837,7 +41837,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>Main.fbMotionStage_m1</Name>
 						<BitSize>299520</BitSize>
-						<BaseType GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}">lcls_twincat_motion.FB_MotionStage</BaseType>
+						<BaseType GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}">lcls_twincat_motion.FB_MotionStage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -41885,7 +41885,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>Main.fbMotionStage_m2</Name>
 						<BitSize>299520</BitSize>
-						<BaseType GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}">lcls_twincat_motion.FB_MotionStage</BaseType>
+						<BaseType GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}">lcls_twincat_motion.FB_MotionStage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -41933,7 +41933,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>Main.fbMotionStage_m3</Name>
 						<BitSize>299520</BitSize>
-						<BaseType GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}">lcls_twincat_motion.FB_MotionStage</BaseType>
+						<BaseType GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}">lcls_twincat_motion.FB_MotionStage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -41981,7 +41981,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>Main.fbMotionStage_m4</Name>
 						<BitSize>299520</BitSize>
-						<BaseType GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}">lcls_twincat_motion.FB_MotionStage</BaseType>
+						<BaseType GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}">lcls_twincat_motion.FB_MotionStage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
@@ -42029,7 +42029,7 @@ contributing fast faults, unless the FFO is currently vetoed.
 					<Symbol>
 						<Name>Main.fbMotionStage_m5</Name>
 						<BitSize>299520</BitSize>
-						<BaseType GUID="{0A125ED3-4388-42F5-54C8-048B7EF55804}">lcls_twincat_motion.FB_MotionStage</BaseType>
+						<BaseType GUID="{BE45DFCD-9586-A65D-5985-D6DC836EC5E3}">lcls_twincat_motion.FB_MotionStage</BaseType>
 						<Properties>
 							<Property>
 								<Name>TcVarGlobal</Name>
