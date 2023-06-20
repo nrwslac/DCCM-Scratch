@@ -2390,8 +2390,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="1.2657e-07" Offset="-4.6852">
-					<SoftEndMinControl Enable="true" Range="-3.7"/>
-					<SoftEndMaxControl Enable="true" Range="3"/>
+					<SoftEndMinControl Enable="true" Range="-20"/>
+					<SoftEndMaxControl Enable="true" Range="20"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2555,8 +2555,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="1e-06" Offset="-10.712">
-					<SoftEndMinControl Enable="true" Range="-4.15"/>
-					<SoftEndMaxControl Enable="true" Range="3.15"/>
+					<SoftEndMinControl Enable="true" Range="-20"/>
+					<SoftEndMaxControl Enable="true" Range="20"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2617,7 +2617,7 @@ External Setpoint Generation:
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
 				<DrvPara Inverse="true">
-					<Analog VeloReferenz="2" ScaleFactorActTorque="0.1"/>
+					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
 				<Vars VarGrpType="1">
@@ -2720,8 +2720,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="2.4267e-07" Offset="-1031.2195">
-					<SoftEndMinControl Enable="true" Range="-4.82"/>
-					<SoftEndMaxControl Enable="true" Range="6.22"/>
+					<SoftEndMinControl Enable="true" Range="-20"/>
+					<SoftEndMaxControl Enable="true" Range="20"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2782,7 +2782,7 @@ External Setpoint Generation:
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
 				<DrvPara>
-					<Analog VeloReferenz="2" ScaleFactorActTorque="0.1"/>
+					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
 				<Vars VarGrpType="1">
@@ -2885,8 +2885,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="1e-06" Offset="-19.5307">
-					<SoftEndMinControl Enable="true" Range="0.02"/>
-					<SoftEndMaxControl Enable="true" Range="8.65"/>
+					<SoftEndMinControl Enable="true" Range="-20"/>
+					<SoftEndMaxControl Enable="true" Range="20"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2947,7 +2947,7 @@ External Setpoint Generation:
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
 				<DrvPara Inverse="true">
-					<Analog VeloReferenz="2" ScaleFactorActTorque="0.1"/>
+					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
 				<Vars VarGrpType="1">
@@ -3049,11 +3049,11 @@ External Setpoint Generation:
 				<TargetPosControl Range="0.05"/>
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
-			<Encoder Name="Enc" EncType="4">
-				<EncPara ScaleFactorNumerator="1e-06" Offset="-17" MaxCount="#x0000ffff">
-					<SoftEndMinControl Enable="true" Range="-0.59"/>
-					<SoftEndMaxControl Enable="true" Range="41.6"/>
-					<Inc RefMode="2" RefSoftSyncMask="#x0000ffff"/>
+			<Encoder Name="Enc" EncType="1">
+				<EncPara ScaleFactorNumerator="1e-06" Offset="-17">
+					<SoftEndMinControl Enable="true" Range="-20"/>
+					<SoftEndMaxControl Enable="true" Range="20"/>
+					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
@@ -3113,7 +3113,7 @@ External Setpoint Generation:
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
 				<DrvPara>
-					<Analog VeloReferenz="2" ScaleFactorActTorque="0.1"/>
+					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
 				<Vars VarGrpType="1">
@@ -3211,7 +3211,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
+				<EncPara ScaleFactorNumerator="50" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
 					<Var>
@@ -3247,7 +3247,7 @@ External Setpoint Generation:
 			</Encoder>
 			<Drive Name="Drive" DrvType="5">
 				<DrvPara>
-					<Analog TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
+					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
 				<Vars VarGrpType="1">
@@ -3343,7 +3343,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
+				<EncPara ScaleFactorNumerator="50" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
 					<Var>
@@ -3475,7 +3475,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
+				<EncPara ScaleFactorNumerator="50" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
 					<Var>
@@ -3607,7 +3607,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
+				<EncPara ScaleFactorNumerator="50" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
 					<Var>
@@ -3739,7 +3739,7 @@ External Setpoint Generation:
 				<OtherSettings AllowMotionCmdToSlave="true"/>
 			</AxisPara>
 			<Encoder Name="Enc" EncType="29">
-				<EncPara ScaleFactorNumerator="5" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
+				<EncPara ScaleFactorNumerator="50" ScaleFactorDenominator="1000000" MaxCount="#xffffffff" MaxCountHighDWord="#x0000001f"/>
 				<Vars VarGrpType="1">
 					<Name>Inputs</Name>
 					<Var>
@@ -3945,6 +3945,27 @@ External Setpoint Generation:
 				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Reset" Size="1" OffsA="1"/>
 				<Link VarA="Drive^Outputs^Out^nCtrl2" VarB="STM Control^Control^Digital output 1" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="STM Velocity^Velocity"/>
+				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact^Counter value"/>
+				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact^Latch value"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter overflow" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter underflow" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Extrapolation stall" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch C valid" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch extern valid" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Set counter done" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of extern latch" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input A" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input B" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input C" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Sync error" Size="1" OffsA="5"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^TxPDO Toggle" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch C" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Set counter" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact^Set counter value"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="Axes^DCCM-th2-M2_encoder">
@@ -3981,6 +4002,27 @@ External Setpoint Generation:
 				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Reset" Size="1" OffsA="1"/>
 				<Link VarA="Drive^Outputs^Out^nCtrl2" VarB="STM Control^Control^Digital output 1" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="STM Velocity^Velocity"/>
+				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact^Counter value"/>
+				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact^Latch value"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter overflow" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter underflow" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Extrapolation stall" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch C valid" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch extern valid" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Set counter done" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of extern latch" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input A" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input B" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input C" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Sync error" Size="1" OffsA="5"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^TxPDO Toggle" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch C" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Set counter" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact^Set counter value"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="Axes^DCCM-tx-M3_encoder">
@@ -4017,6 +4059,27 @@ External Setpoint Generation:
 				<Link VarA="Drive^Outputs^Out^nCtrl1" VarB="STM Control^Control^Reset" Size="1" OffsA="1"/>
 				<Link VarA="Drive^Outputs^Out^nCtrl2" VarB="STM Control^Control^Digital output 1" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="STM Velocity^Velocity"/>
+				<Link VarA="Enc^Inputs^In^nDataIn1[0]" VarB="ENC Status compact^Counter value"/>
+				<Link VarA="Enc^Inputs^In^nDataIn2[0]" VarB="ENC Status compact^Latch value"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter overflow" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Counter underflow" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Extrapolation stall" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch C valid" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Latch extern valid" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState1" VarB="ENC Status compact^Status^Set counter done" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of extern latch" Size="1" OffsA="4"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input A" Size="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input B" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Status of input C" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^Sync error" Size="1" OffsA="5"/>
+				<Link VarA="Enc^Inputs^In^nState2" VarB="ENC Status compact^Status^TxPDO Toggle" Size="1" OffsA="7"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^InputToggle" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Inputs^In^nState4" VarB="WcState^WcState" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch C" Size="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on negative edge" Size="1" OffsA="3"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Enable latch extern on positive edge" Size="1" OffsA="1"/>
+				<Link VarA="Enc^Outputs^Out^nCtrl1" VarB="ENC Control compact^Control^Set counter" Size="1" OffsA="2"/>
+				<Link VarA="Enc^Outputs^Out^nDataOut1[0]" VarB="ENC Control compact^Set counter value"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="Axes^DCCM-txd-M4_encoder">

@@ -27,7 +27,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 1^Input'}
-	bTH1_POTL AT %Q*:BOOL;
+	bTH1_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
         pv: DCCM:MONO:th1:NOTL
@@ -35,7 +35,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 2^Input'}
-	bTH1_NOTL AT %Q*:BOOL;
+	bTH1_NOTL AT %I*:BOOL;
 	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:th2:POTL
@@ -43,7 +43,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 3^Input'}
-	bTH2_POTL AT %Q*:BOOL;
+	bTH2_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
         pv: DCCM:MONO:th2:NOTL
@@ -51,7 +51,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 4^Input'}
-	bTH2_NOTL AT %Q*:BOOL;
+	bTH2_NOTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
         pv: DCCM:MONO:tx:POTL
@@ -59,7 +59,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 5^Input'}
-	bTX_POTL AT %Q*:BOOL;
+	bTX_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
         pv: DCCM:MONO:tx:NOTL
@@ -67,7 +67,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 6^Input'}
-	bTX_NOTL AT %Q*:BOOL;
+	bTX_NOTL AT %I*:BOOL;
 	
 	
 	{attribute 'pytmc' := '
@@ -76,7 +76,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 7^Input'}
-	bSTO AT %Q*:BOOL;
+	bSTO AT %I*:BOOL;
 
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:DI7
@@ -84,7 +84,7 @@ VAR
         field: ONAM ON ;
     '}
 	{attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL1008_DCCM_STO_DI^Channel 8^Input'}
-	bDI7 AT %Q*:BOOL;
+	bDI7 AT %I*:BOOL;
 	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:A1
@@ -113,7 +113,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//  init the motion stages parameters
 IF ( bInit) THEN
-    bInit := FALSE;
+   // bInit := FALSE;
 //    FFO.i_DevName := 'DCCM-MONO';
     //Bragg 1
     
