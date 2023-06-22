@@ -19,7 +19,6 @@ VAR
      {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 8^Output'}
     bFanOn AT %Q*:BOOL;
 	
-
 	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:th1:POTL
@@ -97,6 +96,7 @@ VAR
     '}
 	{attribute 'TcLinkTo' :=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL3062_DCCM_A1_C1^AI Standard Channel 2^Value'}
 	wC1 AT %I*:INT;
+	
 
 	
     bInit : BOOL:=TRUE;

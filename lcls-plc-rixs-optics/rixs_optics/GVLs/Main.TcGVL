@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="Main" Id="{70c05a97-6edf-41f6-937c-0e62f3a09f50}">
-    <Declaration><![CDATA[-VAR_GLOBAL
+    <Declaration><![CDATA[VAR_GLOBAL
 (*
     Only includes motor definitions for the IOC
     These are hard-coded to be Main.M#,
@@ -56,41 +56,27 @@
 
     (*DCCM Mono*)
     // Encoders	
-	
+
 	{attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH1_ENC
     '}
-	
-	M1_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
+	M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
     fbMotionStage_m1_encoder : FB_MotionStage;
 	
-	{attribute 'pytmc' := '
-        pv: DCCM:SWITCH:MMS:TH2_ENC
-    '}
 
- 	M2_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2 encoder
+ 	M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2 encoder
     fbMotionStage_m2_encoder : FB_MotionStage;
 	
-	{attribute 'pytmc' := '
-        pv: DCCM:SWITCH:MMS:TX_ENC
-    '}
 	
-	M3_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx encoder
+	M8 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx encoder
      fbMotionStage_m3_encoder : FB_MotionStage;
 	 
-	 {attribute 'pytmc' := '
-        pv: DCCM:SWITCH:MMS:TXD_ENC
-    '}
 	
-	M4_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx_d encoder
+	M9 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx_d encoder
      fbMotionStage_m4_encoder : FB_MotionStage;
-	 
-	 {attribute 'pytmc' := '
-        pv: DCCM:SWITCH:MMS:TYD_ENC
-    '}
 	
 	
-	M5_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM ty_d encoder
+	M10 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM ty_d encoder
      fbMotionStage_m5_encoder : FB_MotionStage;
 END_VAR]]></Declaration>
   </GVL>
