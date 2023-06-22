@@ -108,6 +108,8 @@ VAR
     fHighAccel: LREAL := 0.8;
     fLowAccel: LREAL := 0.1;
 
+
+	test: LREAL := 0.1;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -123,22 +125,26 @@ IF ( bInit) THEN
     Main.M1.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
    //Bragg 2
     
-    Main.M2.bPowerSelf :=TRUE;
+	Main.M2.bEnable:=TRUE;    
+	Main.M2.bPowerSelf :=TRUE;
     Main.M2.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M2.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TX
     
-    Main.M3.bPowerSelf :=TRUE;
+    Main.M3.bEnable:=TRUE; 
+	Main.M3.bPowerSelf :=TRUE;
     Main.M3.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M3.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TXD
     
-    Main.M4.bPowerSelf :=TRUE;
+    Main.M4.bEnable:=TRUE; 
+	Main.M4.bPowerSelf :=TRUE;
     Main.M4.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M4.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
     //TYD
     
-    Main.M5.bPowerSelf :=TRUE;
+    Main.M5.bEnable:=TRUE; 
+	Main.M5.bPowerSelf :=TRUE;
     Main.M5.nBrakeMode := ENUM_StageBrakeMode.NO_BRAKE;
     Main.M5.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
 
@@ -155,7 +161,8 @@ END_IF
 	Main.M1.bHardwareEnable := bSTO AND bTH1_POTL AND bTH1_NOTL;
 	Main.M2.bHardwareEnable := bSTO AND bTH2_POTL AND bTH2_NOTL;
 	Main.M3.bHardwareEnable := bSTO AND bTX_POTL AND bTX_NOTL; 
-	
+	Main.M4.bHardwareEnable := bSTO;
+	Main.M5.bHardwareEnable := bSTO;
 	
 
 
@@ -166,12 +173,21 @@ END_IF
       <LineId Id="3" Count="4" />
       <LineId Id="213" Count="0" />
       <LineId Id="256" Count="0" />
-      <LineId Id="9" Count="23" />
+      <LineId Id="9" Count="5" />
+      <LineId Id="460" Count="0" />
+      <LineId Id="15" Count="4" />
+      <LineId Id="461" Count="0" />
+      <LineId Id="20" Count="4" />
+      <LineId Id="462" Count="0" />
+      <LineId Id="25" Count="4" />
+      <LineId Id="463" Count="0" />
+      <LineId Id="30" Count="2" />
       <LineId Id="53" Count="2" />
       <LineId Id="257" Count="5" />
       <LineId Id="264" Count="1" />
       <LineId Id="347" Count="1" />
       <LineId Id="346" Count="0" />
+      <LineId Id="464" Count="0" />
       <LineId Id="263" Count="0" />
       <LineId Id="56" Count="2" />
       <LineId Id="2" Count="0" />

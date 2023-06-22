@@ -983,7 +983,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{85BF455D-934D-415A-B04C-6D4CDD9FF10E}" Name="rixs_optics" PrjFilePath="..\..\rixs_optics\rixs_optics.plcproj" TmcFilePath="..\..\rixs_optics\rixs_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{99E60DBF-669E-48E2-C83C-7F86D3C19D61}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{806C611B-E653-5B3C-616B-C48A0F41E1F5}">
 			<Name>rixs_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1730,6 +1730,10 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txd">
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd">
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^DCCM-th1-M1">
 				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>

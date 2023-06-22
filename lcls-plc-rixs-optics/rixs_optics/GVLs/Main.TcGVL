@@ -46,13 +46,15 @@
     M4 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM txd
     fbMotionStage_m4 : FB_MotionStage;
 
-    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txy^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txy^STM Status^Status^Digital input 2;'}
+    {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd^STM Status^Status^Digital input 1;
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd^STM Status^Status^Digital input 2;'}
     {attribute 'pytmc' := '
-        pv: DCCM:SWITCH:MMS:txy
+        pv: DCCM:SWITCH:MMS:TYD
     '}
-    M5 : DUT_MotionStage := (fVelocity:=30.0, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE); // DCCM txy
+    M5 : DUT_MotionStage := (fVelocity:=30.0, nEnableMode:=ENUM_StageEnableMode.DURING_MOTION, bPowerSelf:=TRUE); // DCCM tyd
 	fbMotionStage_m5 : FB_MotionStage;	
+	
+	
 	
 	M1_encoder : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
     fbMotionStage_m1_encoder : FB_MotionStage;

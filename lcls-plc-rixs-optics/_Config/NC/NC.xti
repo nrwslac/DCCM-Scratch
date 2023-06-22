@@ -2555,8 +2555,8 @@ External Setpoint Generation:
 			</AxisPara>
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="1e-06" Offset="-10.712">
-					<SoftEndMinControl Enable="true" Range="-20"/>
-					<SoftEndMaxControl Enable="true" Range="20"/>
+					<SoftEndMinControl Enable="true" Range="-50"/>
+					<SoftEndMaxControl Enable="true" Range="50"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2721,7 +2721,7 @@ External Setpoint Generation:
 			<Encoder Name="Enc" EncType="1">
 				<EncPara ScaleFactorNumerator="2.4267e-07" Offset="-1031.2195">
 					<SoftEndMinControl Enable="true" Range="-20"/>
-					<SoftEndMaxControl Enable="true" Range="20"/>
+					<SoftEndMaxControl Enable="true" Range="25"/>
 					<Inc RefSoftSyncMask="#x0000ffff"/>
 				</EncPara>
 				<Vars VarGrpType="1">
@@ -2781,7 +2781,7 @@ External Setpoint Generation:
 				</Vars>
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
-				<DrvPara>
+				<DrvPara Inverse="true">
 					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
@@ -3112,7 +3112,7 @@ External Setpoint Generation:
 				</Vars>
 			</Encoder>
 			<Drive Name="Drive" DrvType="24">
-				<DrvPara>
+				<DrvPara Inverse="true">
 					<Analog VeloReferenz="2" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 					<TimeComp TaskDelayCycles="1"/>
 				</DrvPara>
