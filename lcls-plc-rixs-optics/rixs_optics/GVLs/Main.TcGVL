@@ -63,7 +63,9 @@
 	M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
     fbMotionStage_m1_encoder : FB_MotionStage;
 	
-
+	{attribute 'pytmc' := '
+        pv: DCCM:SWITCH:MMS:TH2_E
+    '}
  	M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2 encoder
     fbMotionStage_m2_encoder : FB_MotionStage;
 	
