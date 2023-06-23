@@ -57,17 +57,23 @@
     (*DCCM Mono*)
     // Encoders	
 
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 1^Position'}	
+	th1_e  AT %I*:  ST_RenishawAbsEnc:=(ref:=10);	
+
 	{attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH1_E
+		io: o
     '}
-	M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
-    fbMotionStage_m1_encoder : FB_MotionStage;
+	
+	
+	(*M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1 encoder
+    fbMotionStage_m6 : FB_MotionStage;*)
 	
 	{attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH2_E
     '}
  	M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2 encoder
-    fbMotionStage_m2_encoder : FB_MotionStage;
+    fbMotionStage_m7 : FB_MotionStage;
 	
 	
 	M8 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx encoder
