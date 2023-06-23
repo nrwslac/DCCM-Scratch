@@ -1020,7 +1020,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{85BF455D-934D-415A-B04C-6D4CDD9FF10E}" Name="rixs_optics" PrjFilePath="..\..\rixs_optics\rixs_optics.plcproj" TmcFilePath="..\..\rixs_optics\rixs_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{B570A3F8-351A-6326-5DBA-23CB5DE025BB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{F08D3825-FA24-A15D-EFEE-F05E6B69F33B}">
 			<Name>rixs_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1286,6 +1286,26 @@ External Setpoint Generation:
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
 				<Var>
+					<Name>PRG_DCCM_MONO.TH2_E</Name>
+					<Comment><![CDATA[ DCCM th2_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TX_E</Name>
+					<Comment><![CDATA[ DCCM tx_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TXD_E</Name>
+					<Comment><![CDATA[ DCCM txd_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TYD_E</Name>
+					<Comment><![CDATA[ DCCM tyd_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
 					<Name>PRG_DCCM_MONO.TH1_E</Name>
 					<Comment><![CDATA[DCCM Mono
  Encoders		
@@ -1517,6 +1537,14 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL5042_DCCM_th1_th2">
 				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.TH1_E^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.TH2_E^Count" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL5042_DCCM_tx_txd">
+				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.TXD_E^Count" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.TX_E^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL5042_DCCM_tyd">
+				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.TYD_E^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th1">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>

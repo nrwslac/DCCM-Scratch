@@ -101,16 +101,41 @@ VAR
     (*DCCM Mono*)
     // Encoders		
 	
-	
 	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 1^Position'}	// DCCM th1_encoder
 	TH1_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
-	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:TH1_E
     '}
 	th1_e_mm: LREAL;
 	
-
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 2^Position'}	// DCCM th2_encoder
+	TH2_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:TH2_E
+    '}
+	th2_e_mm: LREAL;
+	
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_tx_txd]^FB Inputs Channel 1^Position'}	// DCCM tx_encoder
+	TX_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:TX_E
+    '}
+	tx_e_mm: LREAL;
+	
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_tx_txd]^FB Inputs Channel 2^Position'}	// DCCM txd_encoder
+	TXD_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:TXD_E
+    '}
+	txd_e_mm: LREAL;
+	
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_tyd]^FB Inputs Channel 1^Position'}	// DCCM tyd_encoder
+	TYD_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
+	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:TYD_E
+    '}
+	tyd_e_mm: LREAL;
 	
     bInit : BOOL:=TRUE;
 
@@ -179,8 +204,10 @@ END_IF
 	
 
 	th1_e_mm := ULINT_TO_LREAL(TH1_E.Count)/20000;
-
-]]></ST>
+	th2_e_mm := ULINT_TO_LREAL(TH2_E.Count)/20000;
+	tx_e_mm := ULINT_TO_LREAL(TX_E.Count)/20000;
+	txd_e_mm := ULINT_TO_LREAL(TXD_E.Count)/20000;
+	tyd_e_mm := ULINT_TO_LREAL(TYD_E.Count)/20000;]]></ST>
     </Implementation>
     <LineIds Name="PRG_DCCM_MONO">
       <LineId Id="3" Count="4" />
@@ -203,7 +230,9 @@ END_IF
       <LineId Id="464" Count="0" />
       <LineId Id="263" Count="0" />
       <LineId Id="56" Count="2" />
+      <LineId Id="633" Count="0" />
       <LineId Id="2" Count="0" />
+      <LineId Id="634" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
