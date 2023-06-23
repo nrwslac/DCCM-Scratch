@@ -96,7 +96,17 @@ VAR
     '}
 	{attribute 'TcLinkTo' :=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL3062_DCCM_A1_C1^AI Standard Channel 2^Value'}
 	wC1 AT %I*:INT;
+
+
+    (*DCCM Mono*)
+    // Encoders		
 	
+	{attribute 'pytmc' := '
+        pv: DCCM:MONO:TH1_E
+    '}
+
+	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 1^Position'}	// DCCM th1_encoder
+	th1_e  AT %I*:  ST_RenishawAbsEnc:=(ref:=0);	
 
 	
     bInit : BOOL:=TRUE;

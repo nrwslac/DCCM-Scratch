@@ -1020,7 +1020,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{85BF455D-934D-415A-B04C-6D4CDD9FF10E}" Name="rixs_optics" PrjFilePath="..\..\rixs_optics\rixs_optics.plcproj" TmcFilePath="..\..\rixs_optics\rixs_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{FF9FE584-E60E-F331-4B2F-F25B5CBE6BF8}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{21D158D3-B252-CF68-4C94-F26AF674CDC3}">
 			<Name>rixs_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1286,9 +1286,9 @@ External Setpoint Generation:
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>Main.th1_e</Name>
+					<Name>PRG_DCCM_MONO.th1_e</Name>
 					<Comment><![CDATA[DCCM Mono
- Encoders	
+ Encoders		
  DCCM th1_encoder]]></Comment>
 					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
@@ -1516,7 +1516,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bFanOn" VarB="Channel 8^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL5042_DCCM_th1_th2">
-				<Link VarA="PlcTask Inputs^Main.th1_e^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.th1_e^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th1">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
