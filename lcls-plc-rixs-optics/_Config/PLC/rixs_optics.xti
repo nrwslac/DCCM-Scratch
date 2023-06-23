@@ -1020,7 +1020,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{85BF455D-934D-415A-B04C-6D4CDD9FF10E}" Name="rixs_optics" PrjFilePath="..\..\rixs_optics\rixs_optics.plcproj" TmcFilePath="..\..\rixs_optics\rixs_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{D41BCCBF-2387-33C4-E910-D597F5BB1766}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{FF9FE584-E60E-F331-4B2F-F25B5CBE6BF8}">
 			<Name>rixs_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1288,7 +1288,8 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.th1_e</Name>
 					<Comment><![CDATA[DCCM Mono
- Encoders	]]></Comment>
+ Encoders	
+ DCCM th1_encoder]]></Comment>
 					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 			</Vars>
