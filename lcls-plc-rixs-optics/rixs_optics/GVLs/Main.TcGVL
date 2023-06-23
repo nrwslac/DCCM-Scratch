@@ -71,7 +71,7 @@
 	
 	(*{attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH2_E
-    '} *)
+    '} 
  	M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2 encoder
     fbMotionStage_m7 : FB_MotionStage;
 	
@@ -85,7 +85,7 @@
 	
 	
 	M10 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM ty_d encoder
-     fbMotionStage_m5_encoder : FB_MotionStage;
+     fbMotionStage_m5_encoder : FB_MotionStage;*)
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
