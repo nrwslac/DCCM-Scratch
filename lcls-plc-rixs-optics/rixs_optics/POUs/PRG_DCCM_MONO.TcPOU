@@ -21,7 +21,7 @@ VAR
 	
 	
 	{attribute 'pytmc' := '
-        pv: DCCM:MONO:th1:POTL
+        pv: DCCM:MONO:TH1:POTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
@@ -29,7 +29,7 @@ VAR
 	bTH1_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
-        pv: DCCM:MONO:th1:NOTL
+        pv: DCCM:MONO:TH1:NOTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
@@ -37,7 +37,7 @@ VAR
 	bTH1_NOTL AT %I*:BOOL;
 	
 	{attribute 'pytmc' := '
-        pv: DCCM:MONO:th2:POTL
+        pv: DCCM:MONO:TH2:POTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
@@ -45,7 +45,7 @@ VAR
 	bTH2_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
-        pv: DCCM:MONO:th2:NOTL
+        pv: DCCM:MONO:TH2:NOTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
@@ -53,7 +53,7 @@ VAR
 	bTH2_NOTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
-        pv: DCCM:MONO:tx:POTL
+        pv: DCCM:MONO:TX:POTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
@@ -61,7 +61,7 @@ VAR
 	bTX_POTL AT %I*:BOOL;
 	
 		{attribute 'pytmc' := '
-        pv: DCCM:MONO:tx:NOTL
+        pv: DCCM:MONO:TX:NOTL
         field: ZNAM OFF ;
         field: ONAM ON ;
     '}
