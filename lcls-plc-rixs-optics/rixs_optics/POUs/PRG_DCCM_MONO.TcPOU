@@ -242,10 +242,12 @@ IF ( bInit) THEN
     Main.M5.nEnableMode := ENUM_StageEnableMode.DURING_MOTION;
 
     //Turn on Fan by default
-    bFanOn := TRUE;
+//    bFanOn := TRUE;
 END_IF
 
- 	fbMotionStage_m1  (stMotionStage:=M1);
+    bFanOn := TRUE; 	
+
+	fbMotionStage_m1  (stMotionStage:=M1);
 	fbMotionStage_m2  (stMotionStage:=M2);
 	fbMotionStage_m3  (stMotionStage:=M3);
 	fbMotionStage_m4  (stMotionStage:=M4);
@@ -278,7 +280,10 @@ END_IF
       <LineId Id="463" Count="0" />
       <LineId Id="30" Count="2" />
       <LineId Id="53" Count="2" />
-      <LineId Id="257" Count="5" />
+      <LineId Id="257" Count="1" />
+      <LineId Id="873" Count="0" />
+      <LineId Id="872" Count="0" />
+      <LineId Id="259" Count="3" />
       <LineId Id="264" Count="1" />
       <LineId Id="347" Count="1" />
       <LineId Id="346" Count="0" />
