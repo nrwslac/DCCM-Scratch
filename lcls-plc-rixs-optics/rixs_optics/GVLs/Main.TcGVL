@@ -19,7 +19,7 @@
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH1
     '}
-    M1 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1
+    M1 : DUT_MotionStage := (fVelocity:=100, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1
     fbMotionStage_m1 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th2^STM Status^Status^Digital input 1;

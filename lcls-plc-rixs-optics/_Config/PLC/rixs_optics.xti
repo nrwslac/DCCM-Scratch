@@ -2,6 +2,43 @@
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.44" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
+			<Name GUID="{4B0DBBA4-11EF-DC4A-BF0D-C44F27183D05}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<BitSize>0</BitSize>
+			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
+		</DataType>
+		<DataType>
+			<Name GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Comment><![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]></Comment>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>Count</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+				<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
+				<BitSize>64</BitSize>
+				<BitOffs>0</BitOffs>
+				<Properties>
+					<Property>
+						<Name>TcAddressType</Name>
+						<Value>Input</Value>
+					</Property>
+				</Properties>
+			</SubItem>
+			<SubItem>
+				<Name>Status</Name>
+				<Type GUID="{4B0DBBA4-11EF-DC4A-BF0D-C44F27183D05}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Comment><![CDATA[ Status struct placeholder]]></Comment>
+				<BitSize>0</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Ref</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
+				<Comment><![CDATA[ Encoder zero position (useful for aligned position with gantries)]]></Comment>
+				<BitSize>64</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
 			<Name GUID="{CBC83B73-B816-4597-A9E5-2B03263CA131}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -795,43 +832,6 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{4B0DBBA4-11EF-DC4A-BF0D-C44F27183D05}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
-			<BitSize>0</BitSize>
-			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
-		</DataType>
-		<DataType>
-			<Name GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
-			<Comment><![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]></Comment>
-			<BitSize>128</BitSize>
-			<SubItem>
-				<Name>Count</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
-				<Comment><![CDATA[ Connect to encoder "Position" input]]></Comment>
-				<BitSize>64</BitSize>
-				<BitOffs>0</BitOffs>
-				<Properties>
-					<Property>
-						<Name>TcAddressType</Name>
-						<Value>Input</Value>
-					</Property>
-				</Properties>
-			</SubItem>
-			<SubItem>
-				<Name>Status</Name>
-				<Type GUID="{4B0DBBA4-11EF-DC4A-BF0D-C44F27183D05}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
-				<Comment><![CDATA[ Status struct placeholder]]></Comment>
-				<BitSize>0</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Ref</Name>
-				<Type GUID="{18071995-0000-0000-0000-00000000000B}">ULINT</Type>
-				<Comment><![CDATA[ Encoder zero position (useful for aligned position with gantries)]]></Comment>
-				<BitSize>64</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-		</DataType>
-		<DataType>
 			<Name GUID="{875D2B22-B7EB-497E-B933-0C004593CCF3}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">PLCTONC_AXIS_REF_CTRL</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -1020,13 +1020,14 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{85BF455D-934D-415A-B04C-6D4CDD9FF10E}" Name="rixs_optics" PrjFilePath="..\..\rixs_optics\rixs_optics.plcproj" TmcFilePath="..\..\rixs_optics\rixs_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{0EBBE88B-31FB-F805-C8F2-BD930722CB8F}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="rixs_optics\rixs_optics.tmc" TmcHash="{9F7485D2-5028-AA70-E7E8-A15AD85EFEE0}">
 			<Name>rixs_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
 					<Name>PRG_DCCM_MONO.bTH1_POTL</Name>
+					<Comment><![CDATA[ digital inputs, 6x overtravel limits, 1x STO, 1x spare ]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1069,6 +1070,32 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_DCCM_MONO.wC1</Name>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TH1_E</Name>
+					<Comment><![CDATA[ Absolute Encoders for when axes are running in open loop		
+ DCCM th1_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TH2_E</Name>
+					<Comment><![CDATA[ DCCM th2_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TX_E</Name>
+					<Comment><![CDATA[ DCCM tx_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TXD_E</Name>
+					<Comment><![CDATA[ DCCM txd_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.TYD_E</Name>
+					<Comment><![CDATA[ DCCM tyd_encoder]]></Comment>
+					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 				</Var>
 				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
@@ -1285,42 +1312,11 @@ External Setpoint Generation:
 					<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
-				<Var>
-					<Name>PRG_DCCM_MONO.TH2_E</Name>
-					<Comment><![CDATA[ DCCM th2_encoder]]></Comment>
-					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>PRG_DCCM_MONO.TX_E</Name>
-					<Comment><![CDATA[ DCCM tx_encoder]]></Comment>
-					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>PRG_DCCM_MONO.TXD_E</Name>
-					<Comment><![CDATA[ DCCM txd_encoder]]></Comment>
-					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>PRG_DCCM_MONO.TYD_E</Name>
-					<Comment><![CDATA[ DCCM tyd_encoder]]></Comment>
-					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
-				<Var>
-					<Name>PRG_DCCM_MONO.TH1_E</Name>
-					<Comment><![CDATA[DCCM Mono
- Encoders		
- DCCM th1_encoder]]></Comment>
-					<Type GUID="{E7D8BF8B-2549-C401-85F6-34B274CA315B}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>PRG_DCCM_MONO.bFanOn</Name>
-					<Comment><![CDATA[    FFO    :    FB_FastFault :=(
-        i_DevName := 'DCCM-MONO',
-        i_Desc := 'Fault occurs when device is in an usafe state',
-        i_TypeCode := 16#E50);]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1387,6 +1383,39 @@ External Setpoint Generation:
 				<Var>
 					<Name>Main.fbMotionStage_m5.fbDriveVirtual.MasterAxis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO0</Name>
+					<Comment><![CDATA[    FFO    :    FB_FastFault :=(
+        i_DevName := 'DCCM-MONO',
+        i_Desc := 'Fault occurs when device is in an usafe state',
+        i_TypeCode := 16#E50);
+digital outputs]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO1</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO2</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO3</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO4</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO5</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_DCCM_MONO.bDO6</Name>
+					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -1533,6 +1562,13 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^PRG_DCCM_MONO.bTX_POTL" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO">
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO0" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO1" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO2" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO3" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO4" VarB="Channel 5^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO5" VarB="Channel 6^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bDO6" VarB="Channel 7^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^PRG_DCCM_MONO.bFanOn" VarB="Channel 8^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL5042_DCCM_th1_th2">

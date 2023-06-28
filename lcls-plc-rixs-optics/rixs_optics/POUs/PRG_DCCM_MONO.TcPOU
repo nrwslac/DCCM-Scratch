@@ -8,10 +8,65 @@ VAR
 //        i_Desc := 'Fault occurs when device is in an usafe state',
 //        i_TypeCode := 16#E50);
 
-
-
+//digital outputs
 
     {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO0
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 1^Output'}
+    bDO0 AT %Q*:BOOL;
+	
+	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO1
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 2^Output'}
+    bDO1 AT %Q*:BOOL;
+	
+	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO2
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 3^Output'}
+    bDO2 AT %Q*:BOOL;
+
+  	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO3
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 4^Output'}
+    bDO3 AT %Q*:BOOL; 
+
+  	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO4
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 5^Output'}
+    bDO4 AT %Q*:BOOL; 
+
+  	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO5
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 6^Output'}
+    bDO5 AT %Q*:BOOL; 
+	
+  	   {attribute 'pytmc' := '
+        pv: DCCM:MONO:DO6
+        field: ZNAM OFF ;
+        field: ONAM ON ;
+    '}
+     {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 7^Output'}
+    bDO6 AT %Q*:BOOL; 
+		
+		{attribute 'pytmc' := '
         pv: DCCM:MONO:FAN:PWR
         field: ZNAM OFF ;
         field: ONAM ON ;
@@ -19,6 +74,7 @@ VAR
      {attribute 'TcLinkTo' := 'TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL2008_DCCM_DO^Channel 8^Output'}
     bFanOn AT %Q*:BOOL;
 	
+(* digital inputs, 6x overtravel limits, 1x STO, 1x spare *)
 	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:TH1:POTL
@@ -98,8 +154,7 @@ VAR
 	wC1 AT %I*:INT;
 
 
-    (*DCCM Mono*)
-    // Encoders		
+    // Absolute Encoders for when axes are running in open loop		
 	
 	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 1^Position'}	// DCCM th1_encoder
 	TH1_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
