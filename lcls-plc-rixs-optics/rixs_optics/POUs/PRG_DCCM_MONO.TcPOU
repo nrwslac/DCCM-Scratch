@@ -161,14 +161,14 @@ VAR
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:TH1_E
     '}
-	th1_e_mm: LREAL;
+	th1_e_deg: LREAL;
 	
 	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 2^Position'}	// DCCM th2_encoder
 	TH2_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
 	{attribute 'pytmc' := '
         pv: DCCM:MONO:TH2_E
     '}
-	th2_e_mm: LREAL;
+	th2_e_deg: LREAL;
 	
 	{attribute 'TcLinkTo' := '.Count:=TIIB[EL5042_DCCM_tx_txd]^FB Inputs Channel 1^Position'}	// DCCM tx_encoder
 	TX_E AT %I*:ST_RenishawAbsEnc:=(ref:=0);	
@@ -203,6 +203,7 @@ VAR
 
 
 	test: LREAL := 0.1;
+	th1_e_mm: LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -262,8 +263,8 @@ END_IF
 	Main.M5.bHardwareEnable := bSTO;
 	
 
-	th1_e_mm := ULINT_TO_LREAL(TH1_E.Count)/20000;
-	th2_e_mm := ULINT_TO_LREAL(TH2_E.Count)/20000;
+	th1_e_deg := ULINT_TO_LREAL(TH1_E.Count)/1750000;
+	th2_e_deg := ULINT_TO_LREAL(TH2_E.Count)/1750000;
 	tx_e_mm := ULINT_TO_LREAL(TX_E.Count)/20000;
 	txd_e_mm := ULINT_TO_LREAL(TXD_E.Count)/20000;
 	tyd_e_mm := ULINT_TO_LREAL(TYD_E.Count)/20000;]]></ST>
