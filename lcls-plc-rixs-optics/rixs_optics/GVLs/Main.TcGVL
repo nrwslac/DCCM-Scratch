@@ -13,41 +13,43 @@
 *)
     (*DCCM Mono*)
     // Motors
-	                                               
+	                                    
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th1^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th1^STM Status^Status^Digital input 2;'}
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th1^STM Status^Status^Digital input 2;
+							  .nRawEncoderULINT := TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 1^Position;'}
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH1
     '}
     M1 : DUT_MotionStage := (fVelocity:=0.5, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th1
-    fbMotionStage_m1 : FB_MotionStage;
-
+    fbMotionStage_m1 : FB_MotionStage;  
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th2^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th2^STM Status^Status^Digital input 2;'}
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_th2^STM Status^Status^Digital input 2;
+							  .nRawEncoderULINT := TIIB[EL5042_DCCM_th1_th2]^FB Inputs Channel 2^Position;'}
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TH2
     '}
     M2 : DUT_MotionStage := (fVelocity:=0.5, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM th2
     fbMotionStage_m2 : FB_MotionStage;
-
+	 
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tx^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tx^STM Status^Status^Digital input 2;'}
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tx^STM Status^Status^Digital input 2;
+							  .nRawEncoderULINT := TIIB[EL5042_DCCM_tx_txd]^FB Inputs Channel 1^Position;'}
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TX
     '}
     M3 : DUT_MotionStage := (fVelocity:=0.5, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM tx
     fbMotionStage_m3 : FB_MotionStage;
-
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txd^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txd^STM Status^Status^Digital input 2;'}
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_txd^STM Status^Status^Digital input 2;
+							  .nRawEncoderULINT := TIIB[EL5042_DCCM_tx_txd]^FB Inputs Channel 2^Position;'}
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TXD
     '}
     M4 : DUT_MotionStage := (fVelocity:=0.5, nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE); // DCCM txd
-    fbMotionStage_m4 : FB_MotionStage;
-
+    fbMotionStage_m4 : FB_MotionStage;  
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd^STM Status^Status^Digital input 2;'}
+                              .bLimitBackwardEnable:=TIID^Device 2 (EtherCAT)^EK1200_DCCM^EL7047_DCCM_tyd^STM Status^Status^Digital input 2;
+							  .nRawEncoderULINT := TIIB[EL5042_DCCM_tyd]^FB Inputs Channel 1^Position;'}
     {attribute 'pytmc' := '
         pv: DCCM:SWITCH:MMS:TYD
     '}
